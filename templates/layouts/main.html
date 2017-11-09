@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Crypronite</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="static/css/main.css" />
+        <link rel="icon" href="static/img/cryptonite_logo_black.png">
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+
+						<!-- Logo -->
+							<div class="logo">
+                                <a href="{{ url_for('home') }}">
+                                    <img class="logo" src="static/img/cryptonite_logo.png" style="height:50px;">
+                                    <strong style="vertical-align:text-bottom;">Cryptonite</strong> <span class="extra" style="vertical-align:text-bottom;">by KPMG</span></a>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="{{ url_for('home') }}">Home</a></li>
+{#									<li>#}
+{#										<a href="#" class="icon fa-angle-down">Dropdown</a>#}
+{#										<ul>#}
+{#											<li><a href="#">Option One</a></li>#}
+{#											<li><a href="#">Option Two</a></li>#}
+{#											<li><a href="#">Option Three</a></li>#}
+{#											<li>#}
+{#												<a href="#">Submenu</a>#}
+{#												<ul>#}
+{#													<li><a href="#">Option One</a></li>#}
+{#													<li><a href="#">Option Two</a></li>#}
+{#													<li><a href="#">Option Three</a></li>#}
+{#													<li><a href="#">Option Four</a></li>#}
+{#												</ul>#}
+{#											</li>#}
+{#										</ul>#}
+{#									</li>#}
+									<li><a href="{{ url_for('about') }}">My Account</a></li>
+{#									<li><a href="elements.html">Elements</a></li>#}
+								</ul>
+							</nav>
+
+					</header>
+
+				<!-- Banner -->
+                    {% block content %}{% endblock %}
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section style="text-align: center">
+								<h3>The Team</h3>
+								<ul class="icons">
+                                    <li><a href="#">Alexander Shaw</a></li>
+									<li><a href="#">Jerimy Tucker</a></li>
+									<li><a href="#">Laszlo Peter</a></li>
+									<li><a href="#">Peter Xing</a></li>
+									<li><a href="#">Karthik Rajgopal</a></li>
+									<li><a href="#">Lauren Brown</a></li>
+{#									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>#}
+{#									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>#}
+{#									<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>#}
+								</ul>
+							</section>
+{#							<section class="narrow">#}
+{#								<h4>The Team</h4>#}
+{#								<ul class="links">#}
+{#									<li><a href="#">Alexander Shaw</a></li>#}
+{#									<li><a href="#">Jeremy Tucker</a></li>#}
+{#									<li><a href="#">Lazlo Peter</a></li>#}
+{#									<li><a href="#">Peter Xing</a></li>#}
+{#									<li><a href="#">Karthik Rajgopal</a></li>#}
+{#									<li><a href="#">Lauren Brown</a></li>#}
+{#								</ul>#}
+{#							</section>#}
+{#							<section class="narrow">#}
+{#								<h4>Magna tempus</h4>#}
+{#								<ul class="links">#}
+{#									<li><a href="#">Feugiat ligula</a></li>#}
+{#									<li><a href="#">Vulputate tristique</a></li>#}
+{#									<li><a href="#">Ultrices nulla</a></li>#}
+{#									<li><a href="#">Cursus sed magna</a></li>#}
+{#									<li><a href="#">Sed lectus donec</a></li>#}
+{#								</ul>#}
+{#							</section>#}
+{#							<section>#}
+{#								<h3>Morbi sed volutpat</h3>#}
+{#								<p>Sed vulputate sem tristique cursus sed magna gravida non lorem ipsum dolor sit amet.<p>#}
+{#								<p><a href="#" class="major">(000) 000-0000</a></p>#}
+{#							</section>#}
+						</div>
+						<div class="copyright">
+							<p>&copy; Cryptonite. All rights reserved.</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.dropotron.min.js"></script>
+			<script src="static/js/jquery.selectorr.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/jquery.scrolly.min.js"></script>
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js?1=6"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+            <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+            <script type="text/javascript" src="jspdf.plugin.png_support.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Alternate About{% endblock %}
+{% block content %}
+
+<section id="one" class="main alt">
+    <header class="accent1">
+        <h1>Welcome Karthik!</h1>
+        <p>Here's your Tax Summary.</p>
+    </header>
+    <div class="inner alt">
+        <div class="content">
+            <h3>Tax Summary</h3>
+            <div class="table-wrapper">
+                {% for holdingSplit in data.holdingSplits %}
+                    {% for transaction in holdingSplit.transactions %}
+                      <p>{{ r.id }} {{ r.amount }}</p>
+                      <p>{{ r.date }}</p>
+                    {% endfor %}
+                {% endfor %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Initial Value of Investment Sold</td>
+                            <td>${{ data.totalNativeAmountValue }}</td>
+                        </tr>
+                        <tr>
+                            <td>Current Value of Investment Sold</td>
+                            <td>${{ data.totalNativeAmountSpent }}</td>
+                        </tr>
+                        <tr>
+                            <td>Taxable Gain / (Loss) of Investment Sold</td>
+                            <td>${{ data.currentNetValue }}</td>
+                        </tr>
+{#                        <tr>#}
+{#                            <td>Tax Due (at 30%)</td>#}
+{#                            <td>{{ data.taxDue }}</td>#}
+{#                        </tr>#}
+{#                        <tr>#}
+{#                            <td>Tax Due with current rate (if held for more than 12 months)</td>#}
+{#                            <td>{{ data.taxDue/2.0 }}</td>#}
+{#                        </tr>#}
+                    </tbody>
+                    <tfoot>
+{#                        <tr>#}
+{#                            <td colspan="1"></td>#}
+{#                            <td>T</td>#}
+{#                            <td>{{ data.totalProfitIfConverted }}</td>#}
+{#                        </tr>#}
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
