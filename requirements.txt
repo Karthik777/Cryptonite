@@ -4,3 +4,5 @@ azure==0.8.4
 flask
 coinbase
 python-dateutil
+cryptography
+cffi
