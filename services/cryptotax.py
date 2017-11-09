@@ -2,11 +2,27 @@ from coinbase.wallet.client import Client
 import requests , json
 from services.model import Transaction, CryptoBuyInfo, TaxReport, HoldingSplit
 from dateutil import parser
-import pickle
 import csv
 from flask import request
 import datetime
 import os
+from collections import namedtuple
+import json
+
+class Serializer:
+
+    @staticmethod
+    def encode_obj(obj):
+        if type(obj).__name__ =='instance':
+            return obj.__dict__
+
+    @staticmethod
+    def serialize(obj):
+        return json.dumps(obj, default=Serializer.encode_obj)
+
+    @staticmethod
+    def deserialize(obj):
+        return json.loads(obj, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
 
 
 API_KEY = ''
@@ -14,8 +30,8 @@ API_SECRET = ''
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 ETH_DATA_PATH = os.path.join(APP_ROOT, 'eth-aud-max.csv')
 BPI_DATA_PATH = os.path.join(APP_ROOT, 'btc-aud-max.csv')
-HISTORIC_DATA_PATH = os.path.join(APP_ROOT, 'historicData.pickle')
-BUYLIST_DATA_PATH = os.path.join(APP_ROOT, 'buyList.pickle')
+HISTORIC_DATA_PATH = os.path.join(APP_ROOT, 'historicData.json')
+BUYLIST_DATA_JSON_PATH_ = os.path.join(APP_ROOT, 'buyList.json')
 
 class HistoricData:
     def __init__(self):
@@ -29,14 +45,15 @@ class HistoricData:
         # self.baseBPIparams = self.queryparams.format(self.defaultStartDate,self.defaultEndDate)
 
     def initialiseData(self):
-        with open(HISTORIC_DATA_PATH,'rb') as hD:
-            self.data = pickle.load(hD)
+        # with open(HISTORIC_DATA_PATH,'rb') as hD:
+        #     self.data = Serializer.deserialize(hD.read())
         if self.data is None:
             self.data = {'ETH': {}, 'BTC': {}}
             self.loadData(ETH_DATA_PATH, 'ETH')
             self.loadData(BPI_DATA_PATH, 'BTC')
-            with open(HISTORIC_DATA_PATH, 'wb') as h:
-                pickle.dump(self.data,h)
+            # with open(HISTORIC_DATA_PATH, 'wb') as h:
+            #     json_str = Serializer.serialize(self.data)
+            #     h.write(json_str)
 
     def loadData(self, filePath, type):
         with open(filePath) as csvfile:
@@ -64,9 +81,8 @@ class CoinBaseClient:
         self.client = Client(API_KEY, API_SECRET)
 
     def InitialiseData(self):
-        with open(BUYLIST_DATA_PATH,'rb') as bP:
-            self.buyList = pickle.load(bP)
-
+        with open(BUYLIST_DATA_JSON_PATH_,'r+') as bP:
+            self.buyList = Serializer.deserialize(bP.read())
         # self.getBuys()
         # self.getTransactions()
         # self.getCurrentUser()
@@ -77,8 +93,8 @@ class CoinBaseClient:
         return self.user
 
     def getBuys(self):
-        with open(BUYLIST_DATA_PATH,'rb') as bP:
-            self.buyList = pickle.load(bP)
+        with open(BUYLIST_DATA_JSON_PATH_,'rb') as bP:
+            self.buyList.__dict__ = Serializer.deserialize(bP.read())
         if self.buyList is None or len(self.buyList) == 0:
             for account in self.getAccounts():
                 buys = self.client.get_buys(account.id)['data']
@@ -90,8 +106,9 @@ class CoinBaseClient:
                     crypto.append(tx)
 
                 self.buyList.append(crypto)
-            with open(BUYLIST_DATA_PATH,'wb') as b:
-                pickle.dump(self.buyList,b)
+            json_str = Serializer.serialize(self.buyList)
+            with open(BUYLIST_DATA_JSON_PATH_, 'wb') as b:
+                b.write(json_str)
 
     def getTransactions(self):
         if len(self.transactionList) == 0:
@@ -110,7 +127,7 @@ class CoinBaseClient:
     def getPrice(self,currency, nativeCurrency):
         currencyPair = str(currency + '-' + nativeCurrency)
         response = requests.get('https://api.coinbase.com/v2/prices/' + currencyPair + '/sell')
-        return float(json.loads(response.content)['data']['amount'])
+        return float(json.loads(response.content.decode("utf-8"))['data']['amount'])
 
 class CryptoTaxManager:
     def __init__(self):
@@ -152,6 +169,7 @@ class CapitalGainsCalculator:
             # TODO: Implement Coinbase current price functionality
             # currentRateOfCurrency = self.cryptoTaxManager.priceChart[holding.buyList[0].coinCurrency][date]
             currentRateOfCurrency = self.cryptoTaxManager.coinBaseClient.getPrice(holding.buyList[0].coinCurrency, 'AUD')
+            # currentRateOfCurrency = self.cryptoTaxManager.coinBaseClient.getPrice(holding.buyList[0].coinCurrency, 'AUD')
             holdingSplit = HoldingSplit(holding.totalNativeAmount + holding.totalFees,
                                         holding.totalCurrencyAmount, holding.totalCurrencyAmount * currentRateOfCurrency,
                                         holding.buyList[0].coinCurrency, holding.totalTaxDue, holding.buyList)
