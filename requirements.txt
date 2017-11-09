@@ -1,4 +1,6 @@
+--find-links wheelhouse
+azure==0.8.4
+
 flask
 coinbase
 python-dateutil
-azure==0.8.4

@@ -125,6 +125,9 @@ env\scripts\pip install -r requirements.txt
 echo Upgrade pip package.
 env\scripts\python -m pip install pip --upgrade
 env\scripts\python -m pip install pip --upgrade setuptools
+env\scripts\pip install wheel
+env\scripts\pip wheel azure==0.8.4
+
 IF !ERRORLEVEL! NEQ 0 goto error
 echo Pip install requirements.
 env\scripts\pip install -r requirements.txt
