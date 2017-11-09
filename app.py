@@ -14,7 +14,7 @@ from services.cryptotax import CapitalGainsCalculator
 #----------------------------------------------------------------------------#
 
 app = Flask(__name__)
-cg = None
+cg = CapitalGainsCalculator()
 
 # Automatically tear down SQLAlchemy.
 '''
@@ -78,13 +78,7 @@ if not app.debug:
 #     cg = CapitalGainsCalculator()
 #     app.run()
 
-def runServer():
-    port = int(os.environ.get('PORT', 5000))
-    cg = CapitalGainsCalculator()
-    app.run(host='0.0.0.0', port=port)
-
 # Or specify port manually:
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    cg = CapitalGainsCalculator()
     app.run(host='0.0.0.0', port=port)

@@ -2,67 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec886213-175e-476d-b3ed-7ecfb81934d7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/ico/apple-touch-icon-114-precomposed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/ico/apple-touch-icon-144-precomposed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/ico/apple-touch-icon-57-precomposed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/ico/apple-touch-icon-72-precomposed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/ico/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/atom.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/banner.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/banner.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/comply.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/cryptonite_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/cryptonite_logo_black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/invest.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/learn.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/pic01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/pic02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/pic03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/pic04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/pic05.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/pic06.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/pic07.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/piggy.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/why_kpmg2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/bitcoin.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/btc-aud-max.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/buyList.pickle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/cryptotax.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/eth-aud-max.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/eth.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/historicData.pickle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/model.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.dropotron.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.scrollex.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.scrolly.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.selectorr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/skel.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/errors/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/errors/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/forms/forgot.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/forms/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/forms/register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/layouts/form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/layouts/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pages/placeholder.about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pages/placeholder.alternateabout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pages/placeholder.home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hostingstart-python.py" afterPath="$PROJECT_DIR$/hostingstart-python.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/error.log" afterPath="$PROJECT_DIR$/error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web.config" afterPath="$PROJECT_DIR$/web.config" />
     </list>
     <ignored path="Cryptonite2017.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web.config" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.config" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web.config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -124,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cryptotax.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cryptotax.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/cryptotax.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1770">
@@ -149,11 +91,10 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+            <state relative-caret-position="318">
+              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
                 <element signature="e#169#253#0" expanded="true" />
-                <marker date="1510218883000" expanded="true" signature="2280:2398" ph="..." />
               </folding>
             </state>
           </provider>
@@ -189,8 +130,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/hostingstart-python.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/web.config" />
       </list>
     </option>
   </component>
@@ -266,6 +208,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../kryptonite" />
+    <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -467,9 +410,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1025" height="831" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3512195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3512195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -514,14 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web.config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hostingstart-python.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-24946">
@@ -554,6 +489,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/services/cryptotax.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1770">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hostingstart-python.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -566,22 +511,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        <state relative-caret-position="318">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
             <element signature="e#169#253#0" expanded="true" />
-            <marker date="1510218883000" expanded="true" signature="2280:2398" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/cryptotax.py">
+    <entry file="file://$PROJECT_DIR$/web.config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1770">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
